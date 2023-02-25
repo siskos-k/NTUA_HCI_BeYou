@@ -7,6 +7,35 @@ class DrinkWater extends StatefulWidget {
   _DrinkWater createState() => _DrinkWater();
 }
 
+class DialogExample extends StatelessWidget {
+  const DialogExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () => showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          title: const Text('You are hydrated!'),
+          content: const Text(
+              'Make sure to come back tomorrow to maintain your streak!'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () => Navigator.pop(context, 'Cancel'),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.pop(context, 'OK'),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      ),
+      child: Image(image: AssetImage("assets/drank.png")),
+    );
+  }
+}
+
 class HideShowButton extends StatefulWidget {
   final String text;
 
@@ -76,16 +105,7 @@ class _DrinkWater extends State<DrinkWater> {
                     const Image(image: AssetImage("assets/boysgirls.png")),
                     SizedBox(),
                     const Image(image: AssetImage("assets/sure.png")),
-                    IconButton(
-                        onPressed: () => {
-                              print("drank"),
-                            },
-                        iconSize: 200,
-                        icon: Image.asset(
-                          "assets/drank.png",
-                          height: 200,
-                          width: 200,
-                        )),
+                    DialogExample()
                   ]),
             )));
   }
