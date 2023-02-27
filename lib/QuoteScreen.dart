@@ -50,7 +50,7 @@ class _HideShowButtonState extends State<HideShowButton> {
           ElevatedButton(
             onPressed: _toggleVisibility,
             style: ElevatedButton.styleFrom(primary: Colors.purple),
-            child: Text(_isVisible ? 'Hide Highlight' : 'Reveal Highlight'),
+            child: Text(_isVisible ? 'Hide Quote' : 'Read Quote'),
           ),
           SizedBox(width: 100),
           ElevatedButton(

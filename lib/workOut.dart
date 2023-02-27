@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/WriteJournal.dart';
 import 'package:url_launcher/url_launcher.dart';

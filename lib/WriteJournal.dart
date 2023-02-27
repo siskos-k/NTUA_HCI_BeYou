@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class WriteJournal extends StatefulWidget {
@@ -118,7 +116,7 @@ class _WriteJournal extends State<WriteJournal> {
               ),
               SizedBox(height: 10),
               ElevatedButton(
-                onPressed: () => {print("peos")},
+                onPressed: () => {print("pressed")},
                 style: ElevatedButton.styleFrom(primary: Colors.purple),
                 child: Text('Submit Journal'),
               ),
